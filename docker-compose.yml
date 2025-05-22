@@ -6,9 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "5173:5173"  #Puerto Vite
     volumes:
       - ./src:/app/src
       - ./public:/app/public
     environment:
       - NODE_ENV=development
+    command: ["npm", "run", "dev", "--", "--host"]  

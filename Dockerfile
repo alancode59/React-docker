@@ -1,4 +1,4 @@
-FROM node:18.16.0-alpine
+FROM node:23.6.1-alpine
 
 WORKDIR /app
 
@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 5173
 
 # Comando para iniciar el servidor de desarrollo
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npx", "vite", "--host"]
